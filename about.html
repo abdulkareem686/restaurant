@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Savory Bites</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-warning">Savory</span> Bites
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <button class="btn btn-warning ms-lg-3" data-bs-toggle="modal" data-bs-target="#reservationModal">Reserve a Table</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+   <header class="about-hero">
+    <div class="hero-overlay"></div>
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center text-white about-hero-content">
+                <h1 class="display-3 fw-bold mb-4">Our Story</h1>
+                <p class="lead mb-5">A journey of passion and flavor</p>
+                <div class="about-scroll-hint d-flex flex-column align-items-center">
+                
+                    <a href="#menu-items" class="about-scroll-down-link">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- Our Story -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h2 class="fw-bold mb-5">Welcome to Savory Bites</h2>
+                    <p class="lead mb-5">Founded in 2010 by Chef Michael Laurent, Savory Bites began as a small bistro with a big dream: to create unforgettable dining experiences through exceptional cuisine, impeccable service, and a warm, inviting atmosphere.</p>
+                    
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-4">
+                            <div class="p-4 bg-warning bg-opacity-10 rounded h-100">
+                                <i class="fas fa-utensils fa-3x text-warning mb-3"></i>
+                                <h4 class="fw-bold mb-3">Our Cuisine</h4>
+                                <p>We blend traditional techniques with modern innovation, using only the freshest, locally-sourced ingredients to create dishes that delight the senses.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-4 bg-warning bg-opacity-10 rounded h-100">
+                                <i class="fas fa-wine-glass-alt fa-3x text-warning mb-3"></i>
+                                <h4 class="fw-bold mb-3">Our Philosophy</h4>
+                                <p>We believe dining should be an experience, not just a meal. Every detail, from plate presentation to service, is carefully considered.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-4 bg-warning bg-opacity-10 rounded h-100">
+                                <i class="fas fa-leaf fa-3x text-warning mb-3"></i>
+                                <h4 class="fw-bold mb-3">Sustainability</h4>
+                                <p>Committed to environmental responsibility, we partner with local farmers and practice eco-friendly operations throughout our restaurant.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <img src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" 
+                         alt="Chef preparing food" class="img-fluid rounded mb-5 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold">Meet Our Team</h2>
+                    <p class="text-muted">The talented individuals behind your dining experience</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1583394293211-5e0aad4b9b0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             class="card-img-top" alt="Head Chef">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Michael Laurent</h5>
+                            <p class="text-warning mb-3">Head Chef & Owner</p>
+                            <p class="card-text">With over 20 years of culinary experience, Chef Michael brings creativity and passion to every dish.</p>
+                            <div class="social-icons">
+                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1601315488950-3b5047998b38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                             class="card-img-top" alt="Sous Chef">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Sarah Chen</h5>
+                            <p class="text-warning mb-3">Sous Chef</p>
+                            <p class="card-text">Trained in Paris and Tokyo, Sarah brings international flair to our kitchen.</p>
+                            <div class="social-icons">
+                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
+                             class="card-img-top" alt="Pastry Chef">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Emily Rodriguez</h5>
+                            <p class="text-warning mb-3">Pastry Chef</p>
+                            <p class="card-text">Emily's desserts are works of art that provide the perfect sweet ending to your meal.</p>
+                            <div class="social-icons">
+                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Fresh ingredients" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Our Core Values</h2>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 me-4">
+                            <i class="fas fa-seedling fa-2x text-warning"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">Sustainability</h5>
+                            <p class="mb-0">We prioritize locally-sourced, seasonal ingredients and eco-friendly practices throughout our operations.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 me-4">
+                            <i class="fas fa-heart fa-2x text-warning"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">Passion</h5>
+                            <p class="mb-0">Every dish is prepared with care and attention to detail, reflecting our love for the culinary arts.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 me-4">
+                            <i class="fas fa-users fa-2x text-warning"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">Community</h5>
+                            <p class="mb-0">We're proud to support local farmers, artisans, and food producers in our region.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 me-4">
+                            <i class="fas fa-star fa-2x text-warning"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">Excellence</h5>
+                            <p class="mb-0">From food quality to service, we strive for perfection in every aspect of your dining experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="py-5 bg-warning bg-opacity-10">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold">Awards & Recognition</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-award fa-3x text-warning mb-3"></i>
+                            <h5 class="fw-bold">Michelin Star</h5>
+                            <p class="mb-0">Awarded in 2022 for culinary excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-trophy fa-3x text-warning mb-3"></i>
+                            <h5 class="fw-bold">Best Restaurant</h5>
+                            <p class="mb-0">City Dining Awards 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-medal fa-3x text-warning mb-3"></i>
+                            <h5 class="fw-bold">Green Certification</h5>
+                            <p class="mb-0">Sustainable Restaurant Association 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bold mb-4">Ready to Experience Savory Bites?</h2>
+                    <p class="lead mb-5">Book your table today and embark on a culinary journey you won't forget.</p>
+                    <a href="#reservation" class="btn btn-warning btn-lg me-2">Reserve a Table</a>
+                    <a href="contact.html" class="btn btn-outline-warning btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-black text-white">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="fw-bold mb-4"><span class="text-warning">Savory</span> Bites</h3>
+                    <p>Elevating dining experiences through exceptional cuisine, impeccable service, and unforgettable ambiance.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-tiktok fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="menu.html" class="text-white text-decoration-none">Menu</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="#reservation" class="text-white text-decoration-none">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt text-warning me-2"></i> 123 Gourmet Ave, Foodie City</li>
+                        <li class="mb-2"><i class="fas fa-phone text-warning me-2"></i> (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope text-warning me-2"></i> info@savorybites.com</li>
+                        <li><i class="fas fa-clock text-warning me-2"></i> Open Daily: 11AM - 11PM</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fw-bold mb-4">Instagram Feed</h5>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                                 class="img-fluid rounded" alt="Instagram 1">
+                        </div>
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" 
+                                 class="img-fluid rounded" alt="Instagram 2">
+                        </div>
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1381&q=80" 
+                                 class="img-fluid rounded" alt="Instagram 3">
+                        </div>
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1565958011703-72f8583d2707?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 class="img-fluid rounded" alt="Instagram 4">
+                        </div>
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1610&q=80" 
+                                 class="img-fluid rounded" alt="Instagram 5">
+                        </div>
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=749&q=80" 
+                                 class="img-fluid rounded" alt="Instagram 6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Savory Bites. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Reservation Modal -->
+    <div class="modal fade" id="reservationModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title">Reserve a Table</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Date</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Time</label>
+                                <input type="time" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Party Size</label>
+                            <select class="form-select">
+                                <option selected>Select</option>
+                                <option>1 Person</option>
+                                <option>2 People</option>
+                                <option>3-4 People</option>
+                                <option>5-6 People</option>
+                                <option>7+ People</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Special Requests</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">Confirm Reservation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-warning btn-lg back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
