@@ -1,0 +1,510 @@
+/* Custom CSS for Savory Bites Restaurant */
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Hero Sections */
+.hero-section, .menu-hero, .about-hero, .contact-hero {
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section {
+    background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+}
+
+.menu-hero {
+    background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+}
+
+.about-hero {
+    background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');
+}
+
+.contact-hero {
+    background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Menu Navigation */
+.menu-nav .nav-pills .nav-link {
+    color: #333;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+.menu-nav .nav-pills .nav-link.active {
+    background-color: #fd7e14;
+    color: white;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 99;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 45px;
+}
+
+/* Custom Button Styles */
+.btn-warning {
+    background-color: #fd7e14;
+    border-color: #fd7e14;
+    color: white;
+    font-weight: 500;
+}
+
+.btn-warning:hover {
+    background-color: #e67312;
+    border-color: #e67312;
+    color: white;
+}
+
+.btn-outline-warning {
+    color: #fd7e14;
+    border-color: #fd7e14;
+}
+
+.btn-outline-warning:hover {
+    background-color: #fd7e14;
+    color: white;
+}
+
+/* Text Warning Color */
+.text-warning {
+    color: #fd7e14 !important;
+}
+
+/* Background Warning */
+.bg-warning {
+    background-color: #fd7e14 !important;
+}
+
+/* Card Hover Effect */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Section Padding */
+section {
+    padding: 5rem 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section, .menu-hero, .about-hero, .contact-hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Menu Item Images */
+.d-flex img {
+    object-fit: cover;
+}
+
+/* Accordion Styling */
+.accordion-button:not(.collapsed) {
+    background-color: rgba(253, 126, 20, 0.1);
+    color: #fd7e14;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(253, 126, 20, 0.25);
+}
+
+/* Form Control Focus */
+.form-control:focus, .form-select:focus {
+    border-color: #fd7e14;
+    box-shadow: 0 0 0 0.25rem rgba(253, 126, 20, 0.25);
+}
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+.hero-content h1 {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    font-size: 3.5rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease forwards 1s;
+    opacity: 0;
+}
+
+.hero-buttons {
+    animation: fadeIn 1s ease forwards 1.5s;
+    opacity: 0;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.scroll-down:hover {
+    opacity: 1;
+    color: #fd7e14;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+        60% {
+            transform: translateY(-10px) translateX(-50%);
+        }
+    }
+    /* Menu Hero Specific Styles */
+.menu-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.menu-hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: menuHeroFadeIn 1s ease-out forwards 0.3s;
+}
+
+.menu-hero h1 {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    font-size: 4rem;
+    margin-bottom: 1.5rem !important;
+}
+
+.menu-hero .lead {
+    font-size: 1.75rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards 0.8s;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 1.2s;
+}
+
+.scroll-hint span {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.scroll-down-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    animation: bounce 2s infinite 1.5s;
+}
+
+.scroll-down-link:hover {
+    color: #fd7e14;
+    transform: translateY(5px);
+}
+
+/* Menu Hero Animation */
+@keyframes menuHeroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu-hero {
+        height: 60vh;
+        min-height: 400px;
+        background-attachment: scroll;
+    }
+    
+    .menu-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .menu-hero .lead {
+        font-size: 1.25rem;
+    }
+}
+/* About Hero Specific Styles */
+.about-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.about-hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aboutHeroFadeIn 1s ease-out forwards 0.3s;
+}
+
+.about-hero h1 {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    font-size: 4rem;
+    margin-bottom: 1.5rem !important;
+}
+
+.about-hero .lead {
+    font-size: 1.75rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards 0.8s;
+}
+
+.about-scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 1.2s;
+}
+
+.about-scroll-hint span {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about-scroll-down-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    animation: bounce 2s infinite 1.5s;
+}
+
+.about-scroll-down-link:hover {
+    color: #fd7e14;
+    transform: translateY(5px);
+}
+
+/* About Hero Animation */
+@keyframes aboutHeroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-hero {
+        height: 60vh;
+        min-height: 400px;
+        background-attachment: scroll;
+    }
+    
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-hero .lead {
+        font-size: 1.25rem;
+    }
+}
+/* Contact Hero Specific Styles */
+.contact-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.contact-hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: contactHeroFadeIn 1s ease-out forwards 0.3s;
+}
+
+.contact-hero h1 {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    font-size: 4rem;
+    margin-bottom: 1.5rem !important;
+}
+
+.contact-hero .lead {
+    font-size: 1.75rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards 0.8s;
+}
+
+.contact-scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 1.2s;
+}
+
+.contact-scroll-hint span {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.contact-scroll-down-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    animation: bounce 2s infinite 1.5s;
+}
+
+.contact-scroll-down-link:hover {
+    color: #fd7e14;
+    transform: translateY(5px);
+}
+
+/* Contact Hero Animation */
+@keyframes contactHeroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-hero {
+        height: 60vh;
+        min-height: 400px;
+        background-attachment: scroll;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-hero .lead {
+        font-size: 1.25rem;
+    }
+}
