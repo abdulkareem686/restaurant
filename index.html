@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Savory Bites | Gourmet Dining Experience</title>
+    <title>Savory Bites | Authentic Nigerian & Gourmet Dining</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348123456789?text=Hello%20Savory%20Bites!%20I'd%20like%20to%20place%20an%20order." 
+       class="whatsapp-float pulse-animation" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Order Now</span>
+    </a>
+
+    <!-- Enhanced Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <span class="text-warning">Savory</span> Bites
+                <i class="fas fa-utensils me-2 text-warning"></i>
+                <span class="text-warning">Savory</span> <span class="text-light">Bites</span>
+                <small class="d-block text-muted" style="font-size: 0.7rem; letter-spacing: 2px;">NIGERIAN GOURMET</small>
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -29,100 +45,367 @@
                     <li class="nav-item">
                         <a class="nav-link" href="menu.html">Menu</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Cuisine
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Nigerian Traditional</a></li>
+                            <li><a class="dropdown-item" href="#">Continental Dishes</a></li>
+                            <li><a class="dropdown-item" href="#">Fusion Specials</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Chef's Signature</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about.html">Our Story</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <button class="btn btn-warning ms-lg-3" data-bs-toggle="modal" data-bs-target="#reservationModal">Reserve a Table</button>
+                
+                <!-- WhatsApp Order Button -->
+                <a href="https://wa.me/2348123456789?text=Hello%20Savory%20Bites!%20I'd%20like%20to%20place%20an%20order." 
+                   class="btn btn-warning ms-lg-3 whatsapp-order-btn" target="_blank">
+                    <i class="fab fa-whatsapp me-2"></i> Order via WhatsApp
+                </a>
+                
+                <!-- Reservation Button -->
+                <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#reservationModal">
+                    <i class="fas fa-calendar-check me-2"></i> Reserve Table
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12 text-center text-white hero-content">
-                <h1 class="display-3 fw-bold mb-4">Savor the Art of Fine Dining</h1>
-                <p class="lead mb-5">Where Michelin-star flavors meet warm hospitality</p>
-                <div class="hero-buttons">
-                    <a href="menu.html" class="btn btn-warning btn-lg px-4 py-3 me-3">
-                        <i class="fas fa-utensils me-2"></i> Explore Menu
-                    </a>
-                    <a href="#reservation" class="btn btn-outline-warning btn-lg px-4 py-3">
-                        <i class="fas fa-calendar-check me-2"></i> Book Table
-                    </a>
+    <!-- Enhanced Hero Section -->
+    <header class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1554679665-f5537f187268?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero-overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-8 col-md-10 text-white hero-content">
+                    <h6 class="text-warning mb-3 text-uppercase letter-spacing-2">Authentic Nigerian Cuisine</h6>
+                    <h1 class="display-3 fw-bold mb-4">
+                        Savor the <span class="text-gradient">Flavors</span> of Nigeria
+                    </h1>
+                    <p class="lead mb-5">Experience premium Nigerian dishes with a gourmet twist. From traditional Jollof to modern Afrobeats-inspired plates.</p>
+                    <div class="hero-buttons d-flex flex-wrap gap-3">
+                        <a href="#specials" class="btn btn-primary btn-lg px-4 py-3">
+                            <i class="fas fa-fire me-2"></i> Today's Specials
+                        </a>
+                        <a href="menu.html" class="btn btn-warning btn-lg px-4 py-3">
+                            <i class="fas fa-book-open me-2"></i> Full Menu
+                        </a>
+                        <a href="#delivery" class="btn btn-outline-light btn-lg px-4 py-3">
+                            <i class="fas fa-motorcycle me-2"></i> Delivery
+                        </a>
+                    </div>
+                    
+                    <!-- Nigerian Restaurant Special Features -->
+                    <div class="hero-features mt-5 glass-effect p-4 rounded">
+                        <div class="row">
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="text-center">
+                                    <i class="fas fa-pepper-hot text-warning fa-2x mb-2"></i>
+                                    <p class="mb-0 small">Authentic Spices</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="text-center">
+                                    <i class="fas fa-leaf text-warning fa-2x mb-2"></i>
+                                    <p class="mb-0 small">Farm Fresh</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="text-center">
+                                    <i class="fas fa-glass-cheers text-warning fa-2x mb-2"></i>
+                                    <p class="mb-0 small">Palm Wine Bar</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="text-center">
+                                    <i class="fas fa-music text-warning fa-2x mb-2"></i>
+                                    <p class="mb-0 small">Live Afrobeats</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <a href="#about" class="scroll-down">
+        
+        <!-- Scroll Down Indicator -->
+        <a href="#about" class="scroll-down floating">
             <i class="fas fa-chevron-down"></i>
         </a>
-    </div>
-</header>
+    </header>
 
-    <!-- About Section -->
-    <section class="py-5 bg-light">
+    <!-- About Section with Nigerian Focus -->
+    <section class="py-5" id="about">
         <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                         alt="Restaurant Interior" class="img-fluid rounded shadow">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Nigerian Restaurant Interior" class="img-fluid rounded shadow-lg">
+                        <div class="position-absolute bottom-0 start-0 m-4">
+                            <span class="badge bg-warning text-dark p-2">Since 2015</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="fw-bold mb-4">Our Story</h2>
-                    <p class="lead text-muted mb-4">Founded in 2010, Savory Bites has been serving exceptional cuisine with a modern twist.</p>
-                    <p>Our chefs combine traditional techniques with innovative approaches to create dishes that delight the senses. We source our ingredients from local farmers and producers who share our commitment to quality and sustainability.</p>
-                    <a href="about.html" class="btn btn-warning mt-3">Learn More</a>
+                    <h6 class="text-primary text-uppercase letter-spacing-2 mb-3">Our Nigerian Heritage</h6>
+                    <h2 class="fw-bold mb-4">Where Tradition Meets Modern Dining</h2>
+                    <p class="lead text-muted mb-4">Born in Lagos, perfected globally. We bring authentic Nigerian flavors with contemporary presentation.</p>
+                    
+                    <div class="mb-4">
+                        <h5 class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> What Makes Us Unique</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-star text-warning me-2"></i> 100% Nigerian Chefs</li>
+                                    <li class="mb-2"><i class="fas fa-star text-warning me-2"></i> Locally Sourced Ingredients</li>
+                                    <li class="mb-2"><i class="fas fa-star text-warning me-2"></i> Traditional Cooking Methods</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-star text-warning me-2"></i> Modern Presentation</li>
+                                    <li class="mb-2"><i class="fas fa-star text-warning me-2"></i> Cultural Ambiance</li>
+                                    <li class="mb-2"><i class="fas fa-star text-warning me-2"></i> Afrobeats Music</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="btn btn-primary mt-2">
+                        <i class="fas fa-history me-2"></i> Our Full Story
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Specials Section -->
+    <!-- Nigerian Specialties Section -->
+    <section class="py-5 bg-light" id="specials">
+        <div class="container py-5">
+            <div class="section-header mb-5">
+                <h6 class="text-primary text-uppercase letter-spacing-2 mb-3">Nigerian Favorites</h6>
+                <h2 class="fw-bold mb-3">Must-Try Nigerian Dishes</h2>
+                <p class="text-muted">Traditional recipes with a gourmet presentation</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Jollof Rice -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                                 class="card-img-top" alt="Jollof Rice">
+                            <span class="card-badge">Chef's Special</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Jollof Rice</h5>
+                            <p class="card-text">The legendary Nigerian Jollof rice with chicken, beef, and plantains. Served with moi-moi.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="card-price">₦4,500</span>
+                                <button class="btn btn-sm btn-warning">
+                                    <i class="fas fa-cart-plus me-1"></i> Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Egusi Soup -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&auto=format&fit=crop&w=1422&q=80" 
+                                 class="card-img-top" alt="Egusi Soup">
+                            <span class="card-badge">Best Seller</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Egusi Soup Deluxe</h5>
+                            <p class="card-text">Melon seed soup with assorted meat, fish, and traditional spices. Served with pounded yam.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="card-price">₦5,200</span>
+                                <button class="btn btn-sm btn-warning">
+                                    <i class="fas fa-cart-plus me-1"></i> Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Suya -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" 
+                                 class="card-img-top" alt="Suya">
+                            <span class="card-badge">Spicy</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Beef Suya</h5>
+                            <p class="card-text">Grilled beef skewers with traditional suya spice mix, onions, and tomatoes.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="card-price">₦3,800</span>
+                                <button class="btn btn-sm btn-warning">
+                                    <i class="fas fa-cart-plus me-1"></i> Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View All Button -->
+            <div class="text-center mt-5">
+                <a href="menu.html" class="btn btn-primary btn-lg px-5">
+                    <i class="fas fa-utensils me-2"></i> View Complete Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section class="py-5 bg-dark text-white" id="delivery">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Get Nigerian Delights Delivered</h2>
+                    <p class="lead mb-4">Experience authentic Nigerian cuisine in the comfort of your home. Available on all major platforms.</p>
+                    
+                    <div class="delivery-platforms mb-4">
+                        <h5 class="mb-3">Available on:</h5>
+                        <div class="d-flex flex-wrap gap-3">
+                            <span class="delivery-badge">
+                                <i class="fab fa-whatsapp text-success me-2"></i> WhatsApp Orders
+                            </span>
+                            <span class="delivery-badge">
+                                <i class="fas fa-motorcycle text-warning me-2"></i> Bolt Food
+                            </span>
+                            <span class="delivery-badge">
+                                <i class="fas fa-shopping-bag text-danger me-2"></i> Glovo
+                            </span>
+                            <span class="delivery-badge">
+                                <i class="fas fa-car text-primary me-2"></i> Uber Eats
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Delivery Form -->
+                    <div class="glass-effect p-4 rounded">
+                        <h5 class="mb-3">Quick Delivery Order</h5>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter your delivery address">
+                            <button class="btn btn-warning" type="button">
+                                <i class="fas fa-search-location me-2"></i> Check
+                            </button>
+                        </div>
+                        <p class="small text-muted">
+                            <i class="fas fa-clock me-1"></i> Average delivery time: 30-45 minutes
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=80" 
+                             alt="Food Delivery" class="img-fluid rounded shadow-lg">
+                        <!-- WhatsApp CTA -->
+                        <div class="position-absolute bottom-0 end-0 m-4">
+                            <a href="https://wa.me/2348123456789?text=Hello%20Savory%20Bites!%20I'd%20like%20to%20place%20a%20delivery%20order." 
+                               class="btn btn-success btn-lg" target="_blank">
+                                <i class="fab fa-whatsapp me-2"></i> Order Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nigerian Testimonials -->
     <section class="py-5">
         <div class="container py-5">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="fw-bold">Today's Specials</h2>
-                    <p class="text-muted">Chef's recommendations for this season</p>
-                </div>
+            <div class="section-header mb-5">
+                <h6 class="text-primary text-uppercase letter-spacing-2 mb-3">Customer Reviews</h6>
+                <h2 class="fw-bold mb-3">What Nigerians Are Saying</h2>
+                <p class="text-muted">From Lagos to Abuja, our customers love us</p>
             </div>
+            
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
-                             class="card-img-top" alt="Special Dish 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Truffle Infused Risotto</h5>
-                            <p class="card-text text-muted">Creamy Arborio rice with wild mushrooms and black truffle shavings.</p>
-                            <span class="fw-bold text-warning">$24.99</span>
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="fas fa-quote-left fa-2x text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"The best Jollof rice I've had outside my mother's kitchen! The spices are authentic and the presentation is beautiful."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+                                 class="rounded-circle me-3" width="60" alt="Customer">
+                            <div>
+                                <h6 class="mb-0">Chioma Adebayo</h6>
+                                <small class="text-muted">Lagos Food Blogger</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" 
-                             class="card-img-top" alt="Special Dish 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Grilled Salmon</h5>
-                            <p class="card-text text-muted">Fresh Atlantic salmon with lemon butter sauce and seasonal vegetables.</p>
-                            <span class="fw-bold text-warning">$28.99</span>
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="fas fa-quote-left fa-2x text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"Perfect for showing international friends what Nigerian cuisine is all about. Modern yet authentic!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                                 class="rounded-circle me-3" width="60" alt="Customer">
+                            <div>
+                                <h6 class="mb-0">Tunde Ojo</h6>
+                                <small class="text-muted">Business Executive</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=749&q=80" 
-                             class="card-img-top" alt="Special Dish 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Artisan Bread Basket</h5>
-                            <p class="card-text text-muted">Assortment of freshly baked breads with infused olive oils.</p>
-                            <span class="fw-bold text-warning">$12.99</span>
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="fas fa-quote-left fa-2x text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"Their palm wine selection is incredible! Pair it with their pepper soup for the ultimate Nigerian experience."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" 
+                                 class="rounded-circle me-3" width="60" alt="Customer">
+                            <div>
+                                <h6 class="mb-0">Amina Sule</h6>
+                                <small class="text-muted">Food Critic</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,210 +413,154 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Event Section - Nigerian Themed -->
     <section class="py-5 bg-warning bg-opacity-10">
         <div class="container py-5">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="fw-bold">What Our Guests Say</h2>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <div class="mb-3">
-                                <i class="fas fa-quote-left fa-2x text-warning"></i>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h6 class="text-primary text-uppercase letter-spacing-2 mb-3">Upcoming Events</h6>
+                    <h2 class="fw-bold mb-4">Nigerian Cultural Nights</h2>
+                    <p class="lead mb-4">Join us for special Nigerian-themed events featuring live music, traditional dancers, and special menus.</p>
+                    
+                    <div class="event-list">
+                        <div class="event-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="event-date me-3 text-center bg-primary text-white p-2 rounded">
+                                    <div class="fw-bold fs-4">25</div>
+                                    <div class="small">DEC</div>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Afrobeat Night</h5>
+                                    <p class="text-muted mb-1">Live music with DJ Spinall</p>
+                                    <small><i class="fas fa-clock me-1"></i> 7 PM - 1 AM</small>
+                                </div>
                             </div>
-                            <p class="card-text mb-4">"The culinary experience at Savory Bites is unmatched. Every dish is a masterpiece!"</p>
-                            <div class="d-flex justify-content-center">
-                                <img src="https://randomuser.me/api/portraits/women/32.jpg" 
-                                     class="rounded-circle me-3" width="50" alt="Customer">
-                                <div class="text-start">
-                                    <h6 class="mb-0">Sarah Johnson</h6>
-                                    <small class="text-muted">Food Critic</small>
+                        </div>
+                        
+                        <div class="event-item mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="event-date me-3 text-center bg-primary text-white p-2 rounded">
+                                    <div class="fw-bold fs-4">31</div>
+                                    <div class="small">DEC</div>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">New Year's Eve</h5>
+                                    <p class="text-muted mb-1">7-Course Nigerian Gourmet Dinner</p>
+                                    <small><i class="fas fa-clock me-1"></i> 8 PM - 2 AM</small>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-calendar-alt me-2"></i> View All Events
+                    </a>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <div class="mb-3">
-                                <i class="fas fa-quote-left fa-2x text-warning"></i>
-                            </div>
-                            <p class="card-text mb-4">"The ambiance, service, and food quality make this my favorite restaurant in town."</p>
-                            <div class="d-flex justify-content-center">
-                                <img src="https://randomuser.me/api/portraits/men/75.jpg" 
-                                     class="rounded-circle me-3" width="50" alt="Customer">
-                                <div class="text-start">
-                                    <h6 class="mb-0">Michael Chen</h6>
-                                    <small class="text-muted">Regular Customer</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <div class="mb-3">
-                                <i class="fas fa-quote-left fa-2x text-warning"></i>
-                            </div>
-                            <p class="card-text mb-4">"Perfect for special occasions. The wine pairing suggestions were spot on!"</p>
-                            <div class="d-flex justify-content-center">
-                                <img src="https://randomuser.me/api/portraits/women/68.jpg" 
-                                     class="rounded-circle me-3" width="50" alt="Customer">
-                                <div class="text-start">
-                                    <h6 class="mb-0">Emily Rodriguez</h6>
-                                    <small class="text-muted">First-time Visitor</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80" 
+                         alt="Nigerian Event" class="img-fluid rounded shadow-lg">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reservation Section -->
-    <section class="py-5" id="reservation">
+    <!-- Enhanced Footer with Nigerian Touch -->
+    <footer>
         <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="fw-bold mb-4">Make a Reservation</h2>
-                    <p class="lead text-muted mb-5">Book your table online and we'll contact you to confirm your reservation.</p>
-                    <form class="row g-3 justify-content-center">
-                        <div class="col-md-4">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="col-md-4">
-                            <input type="email" class="form-control" placeholder="Email" required>
-                        </div>
-                        <div class="col-md-4">
-                            <input type="tel" class="form-control" placeholder="Phone" required>
-                        </div>
-                        <div class="col-md-4">
-                            <input type="date" class="form-control" required>
-                        </div>
-                        <div class="col-md-4">
-                            <input type="time" class="form-control" required>
-                        </div>
-                        <div class="col-md-4">
-                            <select class="form-select">
-                                <option selected>Party Size</option>
-                                <option>1 Person</option>
-                                <option>2 People</option>
-                                <option>3-4 People</option>
-                                <option>5-6 People</option>
-                                <option>7+ People</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <textarea class="form-control" rows="3" placeholder="Special Requests"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-warning btn-lg px-5">Book Table</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="py-5 bg-dark text-white">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="fw-bold mb-4">Join Our Newsletter</h2>
-                    <p class="lead mb-5">Subscribe to receive updates on special events, seasonal menus, and exclusive offers.</p>
-                    <form class="row g-3 justify-content-center">
-                        <div class="col-md-8">
-                            <input type="email" class="form-control form-control-lg" placeholder="Your Email Address" required>
-                        </div>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-warning btn-lg w-100">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-5 bg-black text-white">
-        <div class="container py-4">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <h3 class="fw-bold mb-4"><span class="text-warning">Savory</span> Bites</h3>
-                    <p>Elevating dining experiences through exceptional cuisine, impeccable service, and unforgettable ambiance.</p>
-                    <div class="social-icons mt-4">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-tiktok fa-lg"></i></a>
+                    <h3 class="fw-bold mb-4">
+                        <i class="fas fa-utensils text-warning me-2"></i>
+                        <span class="text-warning">Savory</span> <span class="text-light">Bites</span>
+                    </h3>
+                    <p>Bringing authentic Nigerian cuisine to the world with modern flair and traditional flavors.</p>
+                    
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/2348123456789" class="social-icon" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
+                
                 <div class="col-lg-2 col-md-4">
-                    <h5 class="fw-bold mb-4">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-                        <li class="mb-2"><a href="menu.html" class="text-white text-decoration-none">Menu</a></li>
-                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
-                        <li><a href="#reservation" class="text-white text-decoration-none">Reservations</a></li>
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Nigerian Menu</a></li>
+                        <li><a href="#specials">Today's Specials</a></li>
+                        <li><a href="#delivery">Delivery</a></li>
+                        <li><a href="about.html">Our Story</a></li>
                     </ul>
                 </div>
+                
                 <div class="col-lg-3 col-md-4">
-                    <h5 class="fw-bold mb-4">Contact Info</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt text-warning me-2"></i> 123 Gourmet Ave, Foodie City</li>
-                        <li class="mb-2"><i class="fas fa-phone text-warning me-2"></i> (555) 123-4567</li>
-                        <li class="mb-2"><i class="fas fa-envelope text-warning me-2"></i> info@savorybites.com</li>
-                        <li><i class="fas fa-clock text-warning me-2"></i> Open Daily: 11AM - 11PM</li>
+                    <h5 class="mb-4">Contact Info</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                            <span>123 Victoria Island, Lagos</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone text-primary me-2"></i>
+                            <span>+234 812 345 6789</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope text-primary me-2"></i>
+                            <span>info@savorybites.ng</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock text-primary me-2"></i>
+                            <span>Mon-Sun: 10AM - 11PM</span>
+                        </li>
                     </ul>
                 </div>
+                
                 <div class="col-lg-3 col-md-4">
-                    <h5 class="fw-bold mb-4">Instagram Feed</h5>
-                    <div class="row g-2">
-                        <div class="col-4">
-                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
-                                 class="img-fluid rounded" alt="Instagram 1">
+                    <h5 class="mb-4">Payment Methods</h5>
+                    <div class="payment-methods mb-4">
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="payment-icon"><i class="fab fa-cc-visa"></i></span>
+                            <span class="payment-icon"><i class="fab fa-cc-mastercard"></i></span>
+                            <span class="payment-icon"><i class="fab fa-cc-paypal"></i></span>
+                            <span class="payment-icon"><i class="fas fa-mobile-alt"></i></span>
+                            <span class="payment-icon bg-success"><i class="fab fa-whatsapp text-white"></i></span>
                         </div>
-                        <div class="col-4">
-                            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" 
-                                 class="img-fluid rounded" alt="Instagram 2">
-                        </div>
-                        <div class="col-4">
-                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1381&q=80" 
-                                 class="img-fluid rounded" alt="Instagram 3">
-                        </div>
-                        <div class="col-4">
-                            <img src="https://images.unsplash.com/photo-1565958011703-72f8583d2707?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                                 class="img-fluid rounded" alt="Instagram 4">
-                        </div>
-                        <div class="col-4">
-                            <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1610&q=80" 
-                                 class="img-fluid rounded" alt="Instagram 5">
-                        </div>
-                        <div class="col-4">
-                            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=749&q=80" 
-                                 class="img-fluid rounded" alt="Instagram 6">
-                        </div>
+                    </div>
+                    
+                    <h5 class="mb-3">We Deliver To:</h5>
+                    <div class="delivery-areas">
+                        <span class="area-badge">Lagos Island</span>
+                        <span class="area-badge">Lagos Mainland</span>
+                        <span class="area-badge">Victoria Island</span>
+                        <span class="area-badge">Ikoyi</span>
+                        <span class="area-badge">Lekki</span>
                     </div>
                 </div>
             </div>
+            
             <hr class="my-4 bg-secondary">
+            
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 Savory Bites. All rights reserved.</p>
+                    <p class="mb-0">&copy; 2025 Savory Bites Nigerian Gourmet. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <p class="mb-0">
-                        <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
-                        <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+                        <a href="#" class="text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-decoration-none">Terms of Service</a>
                     </p>
                 </div>
             </div>
@@ -344,23 +571,25 @@
     <div class="modal fade" id="reservationModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header bg-warning text-white">
-                    <h5 class="modal-title">Reserve a Table</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">
+                        <i class="fas fa-calendar-check me-2"></i> Reserve a Table
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="reservation-form">
                         <div class="mb-3">
-                            <label class="form-label">Name</label>
-                            <input type="text" class="form-control" required>
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" required>
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="+234 800 000 0000" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Phone</label>
-                            <input type="tel" class="form-control" required>
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="you@example.com">
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
@@ -375,19 +604,32 @@
                         <div class="mb-3">
                             <label class="form-label">Party Size</label>
                             <select class="form-select">
-                                <option selected>Select</option>
-                                <option>1 Person</option>
-                                <option>2 People</option>
+                                <option selected>Select number of people</option>
+                                <option>1-2 People</option>
                                 <option>3-4 People</option>
                                 <option>5-6 People</option>
-                                <option>7+ People</option>
+                                <option>7-8 People</option>
+                                <option>9+ People (Special Arrangement)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Special Occasion</label>
+                            <select class="form-select">
+                                <option selected>None</option>
+                                <option>Birthday Celebration</option>
+                                <option>Anniversary</option>
+                                <option>Business Meeting</option>
+                                <option>Family Gathering</option>
+                                <option>Romantic Dinner</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Special Requests</label>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea class="form-control" rows="3" placeholder="Any dietary restrictions or special requirements?"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-warning w-100">Confirm Reservation</button>
+                        <button type="submit" class="btn btn-primary w-100 py-3">
+                            <i class="fas fa-check-circle me-2"></i> Confirm Reservation
+                        </button>
                     </form>
                 </div>
             </div>
@@ -395,13 +637,52 @@
     </div>
 
     <!-- Back to Top Button -->
-    <a href="#" class="btn btn-warning btn-lg back-to-top" id="backToTop">
+    <a href="#" class="btn btn-primary btn-lg back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <script>
+        // Back to Top Button
+        document.getElementById('backToTop').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Scroll Progress
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.querySelector('.scroll-progress').style.width = scrolled + '%';
+        });
+
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Form Submission
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Add your form submission logic here
+                alert('Thank you! We will contact you shortly.');
+                this.reset();
+            });
+        });
+    </script>
 </body>
 </html>
